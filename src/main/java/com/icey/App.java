@@ -1,13 +1,29 @@
 package com.icey;
 
 /**
- * Hello world!
+ * Java练习2
  *
  */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+public class App {
+    public static void main(String[] args) {
+        /*
+         * 继承: 面向对象三大特征之一,可以使得子类具有父类的属性和方法,还可以在子类中重新定义,追加属性和方法
+         * 优点：提高了代码的复用性、维护性
+         * 弊端：削弱了子类的独立性
+         * 当类之间具有"is a"关系时，推荐使用继承
+         * 格式: public class 子类名 extends 父类名{}
+         * 变量自底向上寻找调用
+         * this.代表本类对象的引用,super.代表父类存储空间的标识,可以理解为父类对象的引用
+         * 继承的构造方法调用:
+         * 子类中所有的构造方法默认都会访问父类中的无参构造方法,推荐自己给出父类无参构造方法
+         * 可以通过super关键字去显式调用父类构造方法
+         * 原因:
+         * 1.子类会继承父类的数据,可能还会使用父类的数据,因此父类会先于子类进行初始化
+         * 2.每个子类构造方法的第一条语句默认是: super();表示调用父类无参构造方法
+         */
+        Zi z = new Zi();
+        Zi z2 = new Zi(40);
+        z.show();
+        z2.show();
     }
 }
