@@ -19,5 +19,6 @@ public class Fu {
         System.out.println(age);
         System.out.println(this.age);
         System.out.println("Fu类中的show方法被调用");
+
     }
 }

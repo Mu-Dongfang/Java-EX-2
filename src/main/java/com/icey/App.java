@@ -4,6 +4,7 @@ package com.icey;
 包:其实就是文件夹,作用是对类进行分类整理
 包的定义格式:package 包名(多级包用.分开)
 */
+
 import com.zc.HelloWorld;
 /*导包:
 背景:使用不同包下的类时,调用时要写类的全路径,过于繁琐;
@@ -13,7 +14,6 @@ import com.zc.HelloWorld;
 
 /**
  * Java练习2
- *
  */
 public class App {
     public static void main(String[] args) {
@@ -40,7 +40,7 @@ public class App {
          * 方法也可以声明为抽象方法,抽象方法必须被覆盖过,且没有函数体
          * 不能在非抽象的类中拥有抽象方法
          */
-        /* 
+        /*
          * 覆盖的规则:
          * 1.参数必须要一致,且返回类型必须兼容
          * 2.不能降低方法的存取权限
@@ -52,7 +52,7 @@ public class App {
         /*
          * 修饰符:
          * 权限修饰符       同一个类中      同包中子类/无关类       不同包子类      不同包无关类
-         * private              √                   
+         * private              √
          * 默认                 √                   √
          * protected            √                   √                √
          * public               √                   √                √               √
@@ -74,5 +74,11 @@ public class App {
         z.show();
         z2.show();
         HelloWorld.main(args);
+        /*
+         抽象方法:没有方法体的方法应定义为抽象方法
+         抽象类:不必产生实体的类,若类中含有抽象方法,则该类必须定义为抽象类
+         抽象声明前加上关键字abstract修饰
+         子类继承抽象父类后必须具体化父类的抽象方法
+         */
     }
 }
